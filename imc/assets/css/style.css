@@ -1,0 +1,108 @@
+:root {
+  --primary-color: rgb(64, 132, 153);
+  --darker-color: rgb(43, 88, 102);
+  --font-family: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  line-height: 1.5em;
+}
+
+.container {
+  min-width: 500px;
+  max-width: 640px;
+  margin-inline: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.heading {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.text {
+    margin: 20px 0;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group label,
+.submit {
+    display: block;
+    width: 100%;
+}
+
+.input-group input {
+    font-size: 16px;
+    padding: 0 20px;
+    height: 30px;
+    margin-top: 2px;
+}
+
+.input-group input:focus {
+    border: 1px solid var(--primary-color);
+}
+
+.submit {
+    border: none;
+    background: var(--primary-color);
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.submit:hover {
+    background: var(--darker-color);
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.grid {
+  margin-block: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.grid p {
+  margin-block: 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.resultado-imc {
+  margin-top: 10px;
+  padding: 5px;
+}
